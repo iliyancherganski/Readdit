@@ -1,18 +1,171 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+/*----Buttons----*/
+/*----button-3----*/
+.button-3 {
+    <!-- HTML ! -->
+    <button class="button-1" role="button">Button 1</button>
+    /* CSS */
+    .button-1
+
+{
+    background-color: #00b521;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+    background-color: #F082AC;
+}
+/*----button-4----*/
+.button-4 {
+    <!-- HTML ! -->
+    <button class="button-1" role="button">Button 1</button>
+    /* CSS */
+    .button-1
+
+{
+    background-color: #f21f27;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+    background-color: #F082AC;
+}
+/*----button-4----*/
+.details-button {
+    background-color: #10CF00; /* Replace with your desired color */
+    color: #FFFFFF; /* Replace with your desired text color */
+}
+
+.like-label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: gray; /* Default color */
+}
+
+input[type="checkbox"]:checked + .like-label {
+    background-color: blue; /* Liked color */
+}
+
+.tgl-flip + .tgl-btn {
+    padding: 2px;
+    transition: all .2s ease;
+    font-family: sans-serif;
+    perspective: 100px;
+}
+
+    .tgl-flip + .tgl-btn:before,
+    .tgl-flip + .tgl-btn:after {
+        display: inline-block;
+        transition: all .4s ease;
+        min-width: 6em;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        line-height: 2em;
+        font-weight: bold;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 4px;
+    }
+
+    .tgl-flip + .tgl-btn:after {
+        content: attr(data-tg-on);
+        background: #02C66F;
+        transform: rotateY(-180deg);
+    }
+
+    .tgl-flip + .tgl-btn:before {
+        content: attr(data-tg-off);
+        background: #FF3A19;
+    }
+
+    .tgl-flip + .tgl-btn:active:before {
+        transform: rotateY(-20deg);
+    }
+
+.tgl-flip:checked + .tgl-btn:before {
+    transform: rotateY(180deg);
+}
+
+.tgl-flip:checked + .tgl-btn:after {
+    transform: rotateY(0);
+    left: 0;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip:hover::after {
+        visibility: visible;
+        opacity: 1;
+    }

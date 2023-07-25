@@ -767,6 +767,16 @@
             "rid": "win"
           }
         }
+      },
+      "Readdit.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Readdit.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Readdit.Core.dll": {}
+        }
       }
     }
   },
@@ -2257,6 +2267,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Readdit.Core/1.0.0": {
+      "type": "project",
+      "path": "../Readdit.Core/Readdit.Core.csproj",
+      "msbuildProject": "../Readdit.Core/Readdit.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2265,7 +2280,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.6"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
+      "Readdit.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2294,7 +2310,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ASUS\\source\\repos\\Readdit\\Readdit.Core\\Readdit.Core.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\source\\repos\\Readdit\\Readdit.Core\\Readdit.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
