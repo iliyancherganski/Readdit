@@ -3,7 +3,7 @@ using Readdit.Data.Models.Enums;
 using Readdit.ViewModels.Choosable;
 using System.ComponentModel.DataAnnotations;
 
-namespace Readdit.Models.Requests
+namespace Readdit.ViewModels.Requests
 {
     public class RequestEditViewModel
     {

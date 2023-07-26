@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 
 namespace Readdit.ViewModels.Resources
 {
@@ -10,7 +10,7 @@ namespace Readdit.ViewModels.Resources
             Categories = r.CategoryResources.Select(x => x.Category.CategoryName);
             Title = r.Title;
             Author = r.Author;
-            DateAdded = r.DateAdded;
+            DateAdded = r.DateAdded;*//**//*
             ExpectedReturnDate = r.ExpectedReturnDate;
         }
 
@@ -32,3 +32,4 @@ namespace Readdit.ViewModels.Resources
         public DateTime? ExpectedReturnDate { get; set; }
     }
 }
+*/

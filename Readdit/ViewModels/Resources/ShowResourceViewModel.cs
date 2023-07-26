@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 
 namespace Readdit.ViewModels.Resources
 {
@@ -37,3 +37,4 @@ namespace Readdit.ViewModels.Resources
         public DateTime DateAdded { get; set; }
     }
 }
+*/

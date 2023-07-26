@@ -1,4 +1,5 @@
 ﻿using Readdit.Data.Models.Requests;
+using Readdit.Models.Requests;
 using System.ComponentModel.DataAnnotations;
 
 namespace Readdit.ViewModels.Requests

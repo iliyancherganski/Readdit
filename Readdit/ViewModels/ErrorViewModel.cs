@@ -1,4 +1,4 @@
-namespace Readdit.Models
+namespace Readdit.ViewModels
 {
     public class ErrorViewModel
     {

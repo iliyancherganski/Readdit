@@ -1,6 +1,6 @@
-﻿using MelonBookshelf.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Readdit.ViewModels;
 using System.Diagnostics;
 
 namespace Readdit.Controllers

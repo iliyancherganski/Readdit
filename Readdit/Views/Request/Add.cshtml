@@ -1,0 +1,58 @@
+﻿@using Readdit.ViewModels.Requests
+@model RequestEditViewModel
+<form id="AddRequestForm" method="post">
+
+    <div>
+        <div style="padding-bottom: 20px">
+            <strong><label style="padding-left: 10px;">Priority</label> </strong>
+            <select asp-for="@Model.Priority" class="form-control">
+                @for (int i = 0; i < Model.Priorities.Count; i++)
+                {
+                    <option value="@i">@Model.Priorities[i]</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <div class="text-lg-start" style="padding-bottom: 20px;">
+            <strong><label style="padding-left: 10px;" asp-for="@Model.Title"></label></strong>
+            <input class="form-control" aria-required="true" asp-for="@Model.Title" />
+            <span asp-validation-for="@Model.Title" class="text-danger"></span>
+        </div>
+
+        <div class="text-lg-start" style="padding-bottom: 20px;">
+            <strong><label style="padding-left: 10px;" asp-for="@Model.Author"></label></strong>
+            <input class="form-control" aria-required="true" asp-for="@Model.Author" />
+            <span asp-validation-for="@Model.Author" class="text-danger"></span>
+        </div>
+    </div>
+    <div style="padding-bottom: 20px">
+        <label style="padding-left: 10px;"><strong>Categories</strong></label>
+        @foreach (var item in Model.Categories)
+        {
+            <div>
+                <input type="checkbox" name="CategoryIds" value="@item.Id" />
+                <label>@item.Name</label>
+            </div>
+        }
+        <button class="btn btn-danger" stype="width:130px" asp-action="Add" asp-controller="Category">Add Category</button>
+    </div>
+    <div>
+        <div class="text-lg-start" style="padding-bottom: 20px;">
+            <strong><label style="padding-left: 10px;" asp-for="@Model.Justification"></label></strong>
+            <input class="form-control" aria-required="true" asp-for="@Model.Justification" />
+            <span asp-validation-for="@Model.Justification" class="text-danger"></span>
+        </div>
+    </div>
+    <div>
+    <div style="text-align: center;">
+        <button class="btn button-34"  asp-action="Add" asp-controller="Request">Add new request</button>
+    </div>
+    <div style="text-align: center;">
+        <h1></h1>
+        <button class="btn btn-danger" stype="width:130px" asp-action="All" asp-controller="Request">Back to requests page</button>
+    </div>
+
+</div>
+</form>

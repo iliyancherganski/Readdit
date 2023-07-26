@@ -1,0 +1,15 @@
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\bin\Debug\net6.0\Readdit.Core.deps.json
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\bin\Debug\net6.0\Readdit.Core.dll
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\bin\Debug\net6.0\Readdit.Core.pdb
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\bin\Debug\net6.0\Readdit.Data.dll
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\bin\Debug\net6.0\Readdit.Data.pdb
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.csproj.CopyComplete
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.dll
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\refint\Readdit.Core.dll
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\Readdit.Core.pdb
+C:\Users\ASUS\source\repos\Readdit\Readdit.Core\obj\Debug\net6.0\ref\Readdit.Core.dll

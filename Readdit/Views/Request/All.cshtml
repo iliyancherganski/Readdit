@@ -1,0 +1,62 @@
+﻿@using Readdit.ViewModels.Requests
+@model IEnumerable<ShowRequestViewModel>
+
+<form id="allRequests" action="/RequestController/All" method="post">
+    <div style="text-align: center;">
+        <button class="btn btn-danger" asp-action="Add" asp-controller="Request">Add new request</button>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col"></th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Categories</th>
+                <th scope="col">Status</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Date Added</th>
+                <th scope="col">Upvotes</th>
+                <th scope="col">You</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int count = 0;
+            }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @{
+                        count++;
+                    }
+                    <th scope="row">@count</th>
+                    <td>
+                        <a class="btn btn-success" stype="width:130px" asp-action="Details" asp-controller="Request" asp-route-id="@item.Id">Details</a>
+                    </td>
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@String.Join(", ", item.Categories)</td>
+                    <td>@item.Status</td>
+                    <td>@item.Priority</td>
+                    <td>@item.DateAdded.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Upvotes</td>
+                    <td>
+                        @if (item.IsUpvoted != null)
+                        {
+                            if ((bool)item.IsUpvoted == false)
+                            {
+                                <button class="btn btn-danger" asp-action="Upvote" asp-controller="Request" asp-route-id="@item.Id">Upvote</button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-success" asp-action="Upvote" asp-controller="Request" asp-route-id="@item.Id">Upvoted</button>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form> 

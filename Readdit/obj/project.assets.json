@@ -771,11 +771,30 @@
       "Readdit.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Readdit.Data": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Readdit.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/Readdit.Core.dll": {}
+        }
+      },
+      "Readdit.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.6",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6"
+        },
+        "compile": {
+          "bin/placeholder/Readdit.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Readdit.Data.dll": {}
         }
       }
     }
@@ -2272,6 +2291,11 @@
       "type": "project",
       "path": "../Readdit.Core/Readdit.Core.csproj",
       "msbuildProject": "../Readdit.Core/Readdit.Core.csproj"
+    },
+    "Readdit.Data/1.0.0": {
+      "type": "project",
+      "path": "../Readdit.Data/Readdit.Data.csproj",
+      "msbuildProject": "../Readdit.Data/Readdit.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {

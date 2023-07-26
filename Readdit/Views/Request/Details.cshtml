@@ -1,0 +1,30 @@
+﻿@using Readdit.ViewModels.Requests
+@model ShowRequestViewModel
+<form id="AddRequestForm" method="post">
+
+    <p style="margin-left:80px"><strong>Title:</strong> @Model.Title</p>
+
+    <p style="margin-left:80px"><strong>Author:</strong> @Model.Author</p>
+
+    <p style="margin-left:80px"><strong>Categories:</strong> @String.Join(", ", Model.Categories)</p>
+
+    <p style="margin-left:80px"><strong>Justification:</strong> @Model.Justification</p>
+
+    <p style="margin-left:80px"><strong>Status:</strong> @Model.Status</p>
+
+    <p style="margin-left:80px"><strong>Priority: </strong> @Model.Priority</p>
+
+    <p style="margin-left:80px"><strong>DateAdded: </strong> @Model.DateAdded.ToString("dd/MM/yyyy")</p>
+
+    <div tyle="margin-left:80px" class="tooltip">
+        <p> <strong>Upvotes: </strong> @Model.Upvotes</p>
+        <span class="tooltiptext">
+            @foreach (var user in Model.UsersUpvoted)
+            {
+                <span>@user</span>
+                <br />
+            }
+        </span>
+    </div>
+    <button class="btn btn-danger" stype="width:130px" asp-action="All" asp-controller="Request">Back to requests page</button>
+</form>

@@ -1,8 +1,7 @@
-﻿using Readdit.Core.Contracts;
+﻿using Microsoft.AspNetCore.Mvc;
+using Readdit.Core.Contracts;
 using Readdit.Core.DTOs;
-using Readdit.ViewModels.Choosable;
 using Readdit.ViewModels.Requests;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Readdit.Controllers
 {
