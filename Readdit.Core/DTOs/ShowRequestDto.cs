@@ -16,6 +16,7 @@ namespace Readdit.Models.Requests
             Status = rr.Status.ToString();
             Priority = rr.Priority.ToString();
             Justification = rr.Justification;
+            RejectionJustification = rr.RejectionJustification;
             DateAdded = rr.DateAdded;
             UsersUpvoted = usersUpvoted;
             Upvotes = UsersUpvoted.Count();
@@ -46,6 +47,9 @@ namespace Readdit.Models.Requests
 
         [Required]
         public IEnumerable<string> UsersUpvoted { get; set; }
+
+        [MaxLength(200)]
+        public string? RejectionJustification { get; set; }
 
         [Required]
         public int Upvotes { get; set; }

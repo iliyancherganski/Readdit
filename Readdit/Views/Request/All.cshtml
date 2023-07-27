@@ -1,6 +1,5 @@
 ﻿@using Readdit.ViewModels.Requests
 @model IEnumerable<ShowRequestViewModel>
-
 <form id="allRequests" action="/RequestController/All" method="post">
     <div style="text-align: center;">
         <button class="btn btn-danger" asp-action="Add" asp-controller="Request">Add new request</button>
@@ -38,7 +37,22 @@
                     <td>@item.Title</td>
                     <td>@item.Author</td>
                     <td>@String.Join(", ", item.Categories)</td>
-                    <td>@item.Status</td>
+                    @if (item.Status == "Declined")
+                    {
+                        <td title="REASON: @item.RejectionJustification">
+                            <strong><font color="#ff1c1c">@item.Status</font></strong>
+                        </td>
+                    }
+                    else if (item.Status == "Processing")
+                    {
+                        <td>
+                            <strong><font color="green">@item.Status</font></strong>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>@item.Status</td>
+                    }
                     <td>@item.Priority</td>
                     <td>@item.DateAdded.ToString("dd/MM/yyyy")</td>
                     <td>@item.Upvotes</td>

@@ -134,5 +134,27 @@ namespace Readdit.Core.Services
                 await dbContext.SaveChangesAsync();
             }
         }
+        public async Task ApproveRequest(int id)
+        {
+            var request = dbContext.ResourcesRequests
+                     .FirstOrDefault(x => x.Id == id);
+            if (request != null && request.Status == RequestStatus.PendingReview)
+            {
+                request.Status = RequestStatus.Processing;
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task DeclineRequest(int id, string rejectionJustification)
+        {
+            var request = dbContext.ResourcesRequests
+                     .FirstOrDefault(x => x.Id == id);
+            if (request != null && request.Status == RequestStatus.PendingReview)
+            {
+                request.Status = RequestStatus.Declined;
+                request.RejectionJustification = rejectionJustification;
+                await dbContext.SaveChangesAsync();
+            }
+        }
     }
 }

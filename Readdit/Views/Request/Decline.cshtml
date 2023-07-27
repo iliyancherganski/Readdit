@@ -1,0 +1,73 @@
+﻿@using Readdit.ViewModels.Requests
+@model DeclineRequestViewModel
+<form asp-action="Decline" method="post">
+
+    <p style="margin-left:80px"><strong>Title:</strong> @Model.Title</p>
+
+    <p style="margin-left:80px"><strong>Author:</strong> @Model.Author</p>
+
+    <p style="margin-left:80px"><strong>Categories:</strong> @String.Join(", ", Model.Categories)</p>
+
+    <p style="margin-left:80px"><strong>Justification:</strong> @Model.Justification</p>
+
+    <p style="margin-left:80px"><strong>Status:</strong> @Model.Status</p>
+
+    <p style="margin-left:80px"><strong>Priority: </strong> @Model.Priority</p>
+
+    <p style="margin-left:80px"><strong>Date Added: </strong> @Model.DateAdded.ToString("dd/MM/yyyy")</p>
+
+    <div tyle="margin-left:80px" class="tooltip">
+        <p> <strong>Upvotes: </strong> @Model.Upvotes</p>
+        <span class="tooltiptext">
+            @foreach (var user in Model.UsersUpvoted)
+            {
+                <span>@user</span>
+                <br />
+            }
+        </span>
+    </div>
+
+    <div class="text-lg-start" style="padding-bottom: 20px;">
+        <strong><label style="padding-left: 10px;" asp-for="@Model.RejectionJustification"></label></strong>
+        <input class="form-control" aria-required="true" asp-for="@Model.RejectionJustification" />
+        <span asp-validation-for="@Model.RejectionJustification" class="text-danger"></span>
+    </div>
+    <div style="text-align: center;">
+        <button class="btn button-34" asp-action="Decline" asp-controller="Request">Decline request</button>
+    </div>
+    <button class="btn btn-danger" stype="width:130px" asp-action="Details" asp-controller="Request" asp-route-id='@Model.Id'>Cancel</button>
+</form>
+
+
+<style>
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+</style>
+
+<div class="tooltip">
+    Hover over me
+    <span class="tooltiptext">Tooltip text</span>
+</div>

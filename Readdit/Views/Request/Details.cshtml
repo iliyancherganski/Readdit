@@ -1,6 +1,6 @@
 ﻿@using Readdit.ViewModels.Requests
 @model ShowRequestViewModel
-<form id="AddRequestForm" method="post">
+<form id="DeclineRequestForm" method="post">
 
     <p style="margin-left:80px"><strong>Title:</strong> @Model.Title</p>
 
@@ -14,7 +14,7 @@
 
     <p style="margin-left:80px"><strong>Priority: </strong> @Model.Priority</p>
 
-    <p style="margin-left:80px"><strong>DateAdded: </strong> @Model.DateAdded.ToString("dd/MM/yyyy")</p>
+    <p style="margin-left:80px"><strong>Date Added: </strong> @Model.DateAdded.ToString("dd/MM/yyyy")</p>
 
     <div tyle="margin-left:80px" class="tooltip">
         <p> <strong>Upvotes: </strong> @Model.Upvotes</p>
@@ -26,5 +26,14 @@
             }
         </span>
     </div>
+    @if (Model.Status == "PendingReview")
+    {
+        <button class="btn btn-danger" stype="width:130px" asp-action="Approve" asp-controller="Request" asp-route-id="@Model.Id">Approve</button>
+        <button class="btn btn-danger" stype="width:130px" asp-action="Decline" asp-controller="Request" asp-route-id="@Model.Id"> Decline</button>
+    }
+    @if (Model.Status == "Processing")
+    {
+        <button class="btn btn-danger" stype="width:130px" @*asp-action="All" asp-controller="Request"*@>Add as new resource</button>
+    }
     <button class="btn btn-danger" stype="width:130px" asp-action="All" asp-controller="Request">Back to requests page</button>
 </form>

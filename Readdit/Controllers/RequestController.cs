@@ -77,5 +77,31 @@ namespace Readdit.Controllers
             await requestService.AddNewRequestAsync(dto, GetUserId());
             return RedirectToAction(nameof(All));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Approve(int id)
+        {
+            await requestService.ApproveRequest(id);
+            return RedirectToAction(nameof(All));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Decline(int id)
+        {
+            var model = new DeclineRequestViewModel(await requestService.GetRequest(id, GetUserId()));
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Decline(DeclineRequestViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(new DeclineRequestViewModel(await requestService.GetRequest(model.Id, GetUserId())));
+            }
+            await requestService.DeclineRequest(model.Id, model.RejectionJustification);
+            return RedirectToAction(nameof(All));
+        }
     }
 }

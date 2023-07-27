@@ -14,5 +14,7 @@ namespace Readdit.Core.Contracts
         Task<ShowRequestDto> GetRequest(int id, string userId);
         Task UpvoteRequest(int requestId, string userId);
         Task RemoveUpvoteRequest(int requestId, string userId);
+        Task ApproveRequest(int id);
+        Task DeclineRequest(int id, string rejectionJustification);
     }
 }

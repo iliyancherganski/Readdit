@@ -18,6 +18,7 @@ namespace Readdit.ViewModels.Requests
             Author = r.Author;
             Status = r.Status.ToString();
             Justification = r.Justification;
+            RejectionJustification = r.RejectionJustification;
             Priority = r.Priority.ToString();
             DateAdded = r.DateAdded;
             UsersUpvoted = r.UsersUpvoted.ToList();
@@ -40,6 +41,9 @@ namespace Readdit.ViewModels.Requests
         [Required]
         public string Justification { get; set; } = null!;
 
+        [MaxLength(200)]
+        public string? RejectionJustification { get; set; }
+
         [Required]
         public string Status { get; set; } = null!;
 
@@ -56,5 +60,6 @@ namespace Readdit.ViewModels.Requests
 
         [Required]
         public int Upvotes { get; set; }
+
     }
 }
