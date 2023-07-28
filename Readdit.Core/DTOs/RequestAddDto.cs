@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Readdit.Core.DTOs
 {
-    public class RequestEditDto
+    public class RequestAddDto
     {
-        public RequestEditDto()
+        public RequestAddDto()
         {
 
         }
-        public RequestEditDto(List<CategoryDto> categories)
+        public RequestAddDto(List<CategoryDto> categories)
         {
             Priorities = Enum.GetNames(typeof(RequestPriority)).ToList();
             Categories = categories;

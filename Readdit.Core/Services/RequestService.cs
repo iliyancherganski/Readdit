@@ -18,12 +18,12 @@ namespace Readdit.Core.Services
             this.dbContext = dbContext;
         }
 
-        public async Task<RequestEditDto> GetAddNewRequest()
+        public async Task<RequestAddDto> GetAddNewRequest()
         {
-            var model = new RequestEditDto(GetAllCategories().ToList());
+            var model = new RequestAddDto(GetAllCategories().ToList());
             return model;
         }
-        public async Task AddNewRequestAsync(RequestEditDto model, string userId)
+        public async Task AddNewRequestAsync(RequestAddDto model, string userId)
         {
             ResourceRequest rr = new ResourceRequest
             {

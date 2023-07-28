@@ -1,10 +1,10 @@
-﻿/*using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Readdit.ViewModels.Resources
 {
     public class ShowResourceViewModel
     {
-        public ShowResourceViewModel(Resource r)
+        /*public ShowResourceViewModel(Resource r)
         {
             Id = r.Id;
             Type = r.Type.ToString();
@@ -13,7 +13,7 @@ namespace Readdit.ViewModels.Resources
             Author = r.Author;
             Status = r.Status.ToString();
             DateAdded = r.DateAdded;
-        }
+        }*/
 
         [Required]
         public int Id { get; set; }
@@ -37,4 +37,3 @@ namespace Readdit.ViewModels.Resources
         public DateTime DateAdded { get; set; }
     }
 }
-*/

@@ -9,8 +9,8 @@ namespace Readdit.Core.Contracts
     {
         Task<IEnumerable<ShowRequestDto>> GetAllRequests(string userId);
         IEnumerable<CategoryDto> GetAllCategories();
-        Task<RequestEditDto> GetAddNewRequest();
-        Task AddNewRequestAsync(RequestEditDto model, string userId);
+        Task<RequestAddDto> GetAddNewRequest();
+        Task AddNewRequestAsync(RequestAddDto model, string userId);
         Task<ShowRequestDto> GetRequest(int id, string userId);
         Task UpvoteRequest(int requestId, string userId);
         Task RemoveUpvoteRequest(int requestId, string userId);

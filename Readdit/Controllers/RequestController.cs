@@ -66,7 +66,7 @@ namespace Readdit.Controllers
             {
                 ModelState.AddModelError("", "There should be at least one category added.");
             }
-            RequestEditDto dto = new RequestEditDto
+            RequestAddDto dto = new RequestAddDto
             {
                 CategoryIds = model.CategoryIds,
                 Priority = model.Priority,

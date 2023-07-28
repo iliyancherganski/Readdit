@@ -11,7 +11,7 @@ namespace Readdit.ViewModels.Requests
         {
 
         }
-        public RequestEditViewModel(RequestEditDto r)
+        public RequestEditViewModel(RequestAddDto r)
         {
             Categories = r.Categories;
             CategoryIds = r.CategoryIds;
